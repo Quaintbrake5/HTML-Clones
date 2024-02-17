@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deezer</title>
+        <!-- <link rel="stylesheet" href="deezer.css"> -->
+</head>
+<body>
+
+  <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter,apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Fira Sans,Roboto,Oxygen,Ubuntu,Droid Sans,Arial,sans-serif;
+}
+
+body{
+    margin-right: -80px;
+    width: 1280px;
+    min-height: 887px;
+    min-width: 323px;
+}
+
+.container{
+    background-color: transparent;
+    height: 100vh;
+    max-width: auto;
+    margin-top: auto;
+    max-width: 100%;
+    width: auto;
+}
+
+.nav-tempo-section{
+    background-color: black;
+    border-bottom: 0.01px solid white;
+    margin-top: auto;
+}
+
+.tempo-topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 80px;
+    padding: 0px 5%;
+    z-index: 4;
+    padding-bottom: 5%;
+    text-decoration: none;
+    margin-top: 0px;
+}
+
+.tempo-topbar .tempo-topbar-actions a button{
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius:13px;
+    align-items: center;
+    justify-content: right;
+    transition: ease-in-out;
+    transition-duration: 4s;
+    margin-top: 20%;
+    font-family: Inter,apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Fira Sans,Roboto,Oxygen,Ubuntu,Droid Sans,Arial,sans-serif;
+}
+
+.tempo-topbar .tempo-topbar-actions a:nth-child(1) button{
+    background-color: transparent;
+    color: white;
+    margin-right: 20px;
+    text-decoration-color: black;
+    border: 0.01px solid;
+    font-weight: bold;
+    
+}
+
+.tempo-topbar .tempo-topbar-actions a:nth-child(2) button{
+    background-color: #A238FF;
+    color: white;
+    margin-left: auto;
+    font-weight: bold;
+}
+
+.tempo-topbar .logo-deezer img{
+    margin-top: 45%;
+}
+
+.gap-l-top{
+    margin-top: var(--gap-l);
+}
+
+.gap-l-top .offer-page{
+    display: block;
+    background-color: black;
+    height: 50%;
+}
+
+.gap-l-top section.section-large{
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+}
+
+.gap-l-top .section-large .h1-text-center{
+    font-family: Inter,apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Fira Sans,Roboto,Oxygen,Ubuntu,Droid Sans,Arial,sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    letter-spacing: .25px;
+    text-wrap: balance;
+    color: white;
+    background-color: black;
+    text-align: center;
+    margin-top: 2%;
+    word-spacing: -5px;
+}
+
+.gap-l-top .gap-m-top{
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    font-family: Inter,apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Fira Sans,Roboto,Oxygen,Ubuntu,Droid Sans,Arial,sans-serif;
+}
+
+.card{
+    background-color: #1b191f;
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+.card .gap-m-top .section-disclaimer svg{
+    float: left;
+    margin-right: 5px;
+    width: 12%;
+    height: 30px;
+}
+
+.card .gap-m-top .section-disclaimer p.disclaimer-text{
+    font-weight: 500;
+}
+
+.card2{
+    background-color: #1b191f;
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 2%; 
+}
+
+.card2 .gap-m-top .vertical-stepper-itemstep-md svg{
+    align-items: center;
+    border-radius: 200px;
+    display: flex;
+    height: 33px;
+    justify-content: center;
+    opacity: .98;
+    width: 33px;
+    z-index: 3;
+    float: left;
+    margin-right: 2%;
+    margin-left: -36%;
+}
+
+.card2 .vertical-stepper-item-title{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin-right: 20%;
+}
+
+.card2 .vertical-stepper-item-sm{
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    justify-content: center;
+    letter-spacing: .01em;
+}
+
+.gap-xl-top-padding{
+    background: #A238FF;
+    margin-top: 80px;
+    padding-bottom: 12px;
+}
+
+.gap-xl-top-padding .wave-bg-container{
+    margin-top: 50px;
+}
+
+.gap-xl-top-padding svg{
+    fill: black;
+    margin-bottom: 20px;
+    padding: 0.05px;
+    transform: matrix(-1, 0, 0, -1, 0, 0);
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    align-items: normal;
+    align-self: auto;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 3s;
+    animation-fill-mode: none;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: ease;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: inline-flex;
+    position: sticky;
+}
+
+.gap-xl-top-padding ul.cards-container{
+    margin-bottom: 24px;
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    list-style: none;
+}
+
+.gap-xl-top-padding ul.cards-container .unlogged-card{
+    display: flex;
+    align-items: start;
+    background: white;
+    border-radius: 4px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.gap-xl-top-padding ul.cards-container .unlogged-card-folded-content span{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    word-break: break-word;
+}
+
+.gap-xl-top-padding .cards-container .card-container-premium-group{
+    display: flex;
+    text-align: -webkit-match-parent;
+    background: #f3f1f6e6;
+    border-radius: 4px;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+
+.gap-xl-top-padding .cards-container .card-container-premium-group .unlogged-card-foldable{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 16px 24px;
+    position: relative;
+    transition-duration: .2s;
+    transition-property: inherit;
+}
+
+.gap-xl-top-padding .cards-container .card-container-premium-group .unlogged-card-folded-content span{
+    align-items: center;
+    align-self: center;
+    color: var(--card-color)!important;
+    display: flex;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: .16px;
+    line-height: 24px;
+}
+
+.gap-xl-top-padding .cards-container .card-container-premium-group .unlogged-card-folded-badge{
+    color: #fdfcfe;
+    background-color: #000000;
+    padding: 4px 8px;
+    margin-left: 10px;
+}
+
+.gap-xl-top-padding .cards-container a{
+    text-decoration: none;
+}
+
+h2.gap-sm-bottom{
+    background: #A238FF;
+    color: white;
+    font-weight: bold;
+    font-size: xx-large;
+    padding: 12px 18px;
+}
+
+h2.gap-sm-bottoms{
+    background: #FF673D;
+    color: white;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.cards-container  a.card-caption{
+    color: black;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 13px;
+    font-size: x-large;
+}
+
+.cards-container .btn-dark-gap-m-bottom button{
+    justify-content: center;
+    align-items: center;
+    width: 5.5in;
+    background-color: #000000;
+    color: #ffffff;
+    margin-top: 20px;
+    border-radius: 12px;
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.cards-container a.gap-xs-bottom{
+    color: #000000;
+}
+
+.cards-container a.card-bottom-link{
+    color: #0F0D13;
+}
+
+.secondary-tempo-section{
+    background-color: white;
+    height: 50%;
+}
+
+.secondary-tempo-section .section-split{
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+
+}
+
+.secondary-tempo-section .section-split h2{
+    color: black;
+    font-size: xxx-large;    
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-top: 40%;
+    font-weight: bold;
+    font-size: 80px;
+    margin-left: 20px;
+    padding-top: 50px;
+}
+
+.secondary-tempo-section .section-split .paragraph{
+    color: #6F6D71;
+    margin-left: 20px;
+
+}
+
+.secondary-tempo-section .section-split .tempo-section-cta{
+    display: flex;
+}
+
+.secondary-tempo-section .section-split .tempo-section-column-left{
+    display: flex;
+    flex-direction: column;
+    margin-top: -40%;
+    padding-bottom: 20px;
+}
+
+.tempo-section-cta button{
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    background-color: #000000;
+    color: #ffffff;
+    margin-top: 20px;
+    border-radius: 12px;
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    font-size: large;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-bottom: 120px;
+    
+}
+
+.tempo-section-cta :nth-last-child(1) button{
+    background-color: transparent;
+    color: black;
+    border: none;
+}
+
+.tempo-section-column-right{
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    width: auto;
+}
+
+.tempo-section-column-right .tempo-section-illustration{
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.tempo-section-illustration .animated-group-gift-cards{
+    aspect-ratio: 1.4;
+    max-width: 560px;
+    position: absolute;
+    width: 100%;
+}
+
+.tempo-section-illustration .animated-card{
+    left: 0;
+    max-width: 299px;
+    top: 3.25%;
+    width: 53.23%;
+    animation: floating 3s infinite alternate;
+    position: absolute;
+    margin-left: 10px;
+}
+
+.tempo-section-column-right .animated-card svg{
+    fill: none;
+    overflow-clip-margin: content-box;
+    overflow: visible;
+    display: flex;
+    justify-content: space-around;
+    align-self: stretch;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0px 0px;
+    text-size-adjust: 100%;
+    position: absolute;
+    animation-play-state: running;
+    animation-duration: inherit 3s infinite alternate;
+}
+
+.section-gap-xl{
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+.section-gap-xl p{
+    color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    font-weight: 600;
+}
+
+.footer{
+    background-color: #0F0D13;
+    border-top: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: hidden;
+    padding: 64px 27px 146px;
+    position: relative;
+    text-align: center;
+}
+
+.footer .cell-stores{
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+    padding-bottom: 50px;
+    place-content: center;
+    width: 100%;
+    height: 80px;
+}
+
+.cell-stores img{
+    max-height: 90px;
+    height: 45px;
+    -webkit-user-drag: none;
+    border: 0;
+    vertical-align: middle;
+}
+
+.footer .cell-navigation-inner{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cell-navigation-inner .nav-main{
+    margin-bottom: 0;
+    max-width: 245px;
+    padding-right: 25px;
+    color: #ffffff;
+    list-style: none !important;
+}
+
+.nav-main .nav-main-item-title{
+    margin-bottom: 10px;
+    padding-bottom: 14px;
+    position: relative;
+    text-align: left;
+    color: #A2A2AD;
+    text-decoration: none;
+}
+
+.nav-main .nav-main-item-visible{
+    text-align: left;
+
+}
+
+a.nav-main-link{
+    text-decoration: none;
+    color: #A2A2AD;
+    justify-content: space-around;
+}
+
+.cell-bottom{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+.cell-bottom .logo-deezer img{
+    height: 50px;
+    margin-top: 10%;
+}
+
+.cell-bottom .social-list{
+    list-style: none;
+    text-decoration: none !important;
+    justify-content: space-between;
+    margin-right: 80%;
+    gap: 10px;
+}
+
+.cell-bottom .social-list a{
+    text-decoration: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cell-bottom .social-list-item svg{
+    color: #A2A2AD;
+    height: 18px;
+    width: 18px;
+    transition: all 3s ease-in-out;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.cell-bottom .legal{
+    color: #A2A2AD;
+    font-size: 14px;
+    line-height: 1;
+    position: relative;
+    margin-left: 70%;
+    margin-bottom: 17%;
+}
+  </style>
+    
+    <div class="container">
+        <div class="nav-tempo-section">
+            <nav class="tempo-topbar">
+                <a class="tempo-topbar-deezer-logo" href="/">
+                    <div class="logo-deezer">
+                        <img src="Deezer Icon.png" alt="Logo Deezer"/>
+                    </div>
+                </a>
+    
+                <div class="tempo-topbar-actions">
+                    <a href="www.deezer.com/en/login"><button>Log in</button></a>
+                    <a href="www.deezer.com/en/register"><button>Sign up</button></a>    
+                </div>
+            </nav>
+        </div>
+
+        <div class="gap-l-top">
+            <div class="offer-page">
+                <section class="section-large">
+                    <h1 class="h1-text-center">To start listening, just pick a plan</h1>
+                </section>
+
+                <div class="card">
+                    <section class="gap-m-top">
+                        <div class="section-disclaimer">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11C21 16.5228 16.5228 21 11 21ZM11 22C17.0751 22 22 17.0751 22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22ZM12.5 15.5C12.5 16.3284 11.8284 17 11 17C10.1716 17 9.5 16.3284 9.5 15.5C9.5 14.6716 10.1716 14 11 14C11.8284 14 12.5 14.6716 12.5 15.5ZM12 12V5H10V12H12Z" fill="#FE9935"></path>
+                            </svg>
+                            <p class="disclaimer-text">Deezer Free isn't available in your country. Please choose an offer and start listening.</p>        
+                        </div>
+                    </section>
+                </div>
+
+                <br>
+
+                <div class="card2">
+                    <section class="gap-m-top">
+                        <div class="vertical-stepper-card">
+                            <div class="vertical-stepper-item">
+                                <div class="vertical-stepper-item-step">
+                                    <div class="vertical-stepper-itemstep-md">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
+                                          </svg>
+    
+                                    </div>
+                                </div>
+    
+                                <div class="vertical-stepper-item-content-sm">
+                                    <div class="vertical-stepper-item-title">A stress free trial</div>
+                                    <div class="vertical-stepper-item-sm">We'll remind you 7 days before your trial ends</div>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <section class="gap-xl-top-padding">
+                    <div class="wave-bg-container">
+                        <svg class="wave-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 376">
+                            <g>
+                                <ellipse cx="-.817" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="61.855" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="124.529" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="187.201" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="249.874" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="312.546" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="375.22" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="437.892" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="500.566" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="563.238" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="625.912" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="688.585" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="751.257" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="813.931" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="876.603" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="939.277" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="1001.95" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="1064.62" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="1127.29" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="1189.97" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="1252.64" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="1315.31" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="1377.99" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                                <ellipse cx="1440.66" cy="187.786" rx="48.836" ry="187.786"></ellipse>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <ul class="cards-container">
+                        <li class="card-container-premium">
+                            <div class="unlogged-card">
+                                <div class="unlogged-card-folded-content">
+                                    <span class="unlogged-card-folded-title "></span>
+                                    <span class="icon-chevron-down "></span>
+                                </div>
+
+                                <a href="/en/offers/premium">
+                                    <h2 class="gap-sm-bottom">PREMIUM</h2>
+                                </a>
+
+                                <a href="/en/offers/premium" class="card-caption">1 MONTH FREE</a>
+
+                                <div class="unlogged-card-gap-m-bottom">
+                                    Pick and play any track ad-free, plus download your favourites and listen offline. Enjoy High Fidelity sound and stream across all your devices.
+                                </div>
+
+                                <a class="btn-dark-gap-m-bottom" href="https://www.deezer.com/payment/go.php?id=1000001&rg=1&origin=offers-page-deezer-premium">
+                                    <button>Try for free</button>
+                                </a>
+
+                                <a href="/en/offers/premium" class="gap-xs-bottom">then $10.99/month</a>
+
+                                <div class="unlogged-xs-bottom">No commitment, cancel anytime.</div>
+
+                                <a class="card-bottom-link" href="/en/offers/premium">Learn more</a>
+                            </div>
+                        </li>
+
+                        <li class="card-container-premium-group">
+                            <div class="unlogged-card-foldable">
+                                <div class="unlogged-card-folded-content">
+                                    <span class="unlogged-card-folded-title ">Annual discount</span>
+                                    <span class="icon-chevron-down "></span>
+                                </div>
+
+                                <div class="unlogged-card-folded-badge">-25%</div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="cards-container">
+                        <li class="card-container-premium">
+                            <div class="unlogged-card">
+                                <div class="unlogged-card-folded-content">
+                                    <span class="unlogged-card-folded-title "></span>
+                                    <span class="icon-chevron-down "></span>
+                                </div>
+
+                                <a href="/en/offers/premium">
+                                    <h2 class="gap-sm-bottoms">FAMILY</h2>
+                                </a>
+
+                                <a href="/en/offers/premium" class="card-caption">1 MONTH FREE</a>
+
+                                <div class="unlogged-card-gap-m-bottom">
+                                    Music for everyone. Get 6 individual accounts, all with Deezer Premium benefits including High Fidelity sound. Listen simultaneously on multiple devices.
+                                </div>
+
+                                <a class="btn-dark-gap-m-bottom" href="https://www.deezer.com/payment/go.php?id=1000001&rg=1&origin=offers-page-deezer-premium">
+                                    <button>Try for free</button>
+                                </a>
+
+                                <a href="/en/offers/premium" class="gap-xs-bottom">then $17.99/month</a>
+
+                                <div class="unlogged-xs-bottom">No commitment, cancel anytime.</div>
+
+                                <a class="card-bottom-link" href="/en/offers/premium">Learn more</a>
+                            </div>
+                        </li>
+
+                        <li class="card-container-premium-group">
+                            <div class="unlogged-card-foldable">
+                                <div class="unlogged-card-folded-content">
+                                    <span class="unlogged-card-folded-title ">Annual discount</span>
+                                    <span class="icon-chevron-down "></span>
+                                </div>
+
+                                <div class="unlogged-card-folded-badge">-8%</div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="secondary-tempo-section">
+                    <div class="section-split">
+                        <div class="tempo-section-column-left">
+                            <h2>Gift card</h2>
+                            <div class="paragraph">What could be better than 3, 6 or 12 months of unlimited music?</div>
+
+                            <div class="tempo-section-cta">
+                                <a class="tempo-btn-theme" href="https://www.deezer.com/payment/go.php?id=1&gift=1&origin=offer_gift&gift=1"><button>Get a gift card</button></a>
+                                <a class="tempo-btn-theme" href="https://www.deezer.com/gift/?page=offer_gift"><button>Activate my gift card</button></a>
+                            </div>
+                        </div>
+
+                        <div class="tempo-section-column-right">
+                            <div class="tempo-section-illustration">
+                                <div class="animated-group-gift-cards">
+                                    <div class="animated-card">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 314 359">
+                                            <g clip-path="url(#a)">
+                                                <path fill="#A238FF" d="m64.6.7 248 52.6L248.4 357 .3 304.6z"></path>
+                                                <path fill="#000" fill-rule="evenodd" d="M150.3 278.4c-5.4 4.8-11 7-16.1 5.8-5-1-9.2-5.1-12.2-11.5-1.3.2-2.6.2-3.8 0-4.6-1-8.2-5.1-10.7-11.5-1.6.4-3.1.5-4.6.2-4.7-1-8.3-5.7-10.5-12.9-2 1.2-4 1.6-5.9 1.2-4.4-.9-7.4-6.4-8.9-14.7-2.5 2.5-5 3.6-7.1 3.2-4.5-1-7.1-8.4-7.5-19.2-3 5.3-6 8.3-8.6 7.7-5.5-1.1-6.5-18-2.4-37.7 4.2-19.6 12-34.6 17.5-33.5 2.6.6 4.1 4.5 4.7 10.6 4.7-9.7 10.1-15.5 14.6-14.5 2.2.4 4 2.5 5.2 5.8 4.8-7 9.8-10.8 14.2-9.9 1.8.4 3.4 1.6 4.8 3.4 5-5.7 10.1-8.5 14.9-7.5 1.5.3 2.9 1 4.2 2 4.8-4.7 9.8-7 14.3-6 1.2.3 2.4.7 3.4 1.4 5.4-4.6 10.9-6.7 16-5.6 5.1 1.1 9.3 5.4 12.4 12 1.5-.4 3-.4 4.5-.1 4.5 1 8.1 5 10.6 11.4 1.6-.5 3.2-.6 4.7-.3 4.8 1 8.3 5.8 10.6 13 2-1.2 3.9-1.6 5.7-1.2 4.4 1 7.5 6.4 9 14.8 2.4-2.5 4.9-3.7 7.1-3.2 4.5 1 7.1 8.4 7.5 19.1 3-5.3 6-8.2 8.6-7.7 5.4 1.2 6.5 18 2.3 37.7-4.1 19.7-12 34.7-17.4 33.5-2.6-.5-4.2-4.5-4.7-10.5-4.8 9.7-10.1 15.4-14.6 14.5-2.3-.5-4-2.6-5.3-5.8-4.7 7-9.7 10.8-14.1 9.8a8.1 8.1 0 0 1-4.9-3.4c-5 5.6-10 8.4-14.8 7.4-1.5-.3-2.9-1-4.1-2-5 4.8-9.9 7.1-14.5 6.1-1.4-.3-2.8-1-4-1.9Zm100-18.3c3.1.6 8.3-11.3 11.6-26.7 3.2-15.4 3.3-28.4.2-29-3.1-.7-8.3 11.2-11.6 26.6-3.2 15.4-3.3 28.4-.2 29ZM37.9 215c3 .6 8.3-11.3 11.5-26.7 3.3-15.4 3.4-28.4.3-29-3.1-.7-8.3 11.2-11.6 26.6-3.2 15.4-3.4 28.4-.2 29Z" clip-rule="evenodd"></path>
+                                                <path fill="#000" d="M150.3 278.4Zm-28.3-5.7Zm-14.5-11.5v-.1Zm-15.1-12.7ZM77.6 235v-.2.1ZM63 219v-.3.3Zm11.2-53v.3-.2Zm19.8-8.6v.1h.1v-.1Zm19-6.5v.2-.1Zm19-5.4h.1Zm17.8-4.7v.1h.1Zm28.4 6.3v.1Zm15.1 11.4Zm15.3 12.7h-.1v.1h.1v-.1Zm14.7 13.6h-.1v.1h.1v-.1Zm14.6 16v.2-.2Zm-11.2 52.9v-.3l-.1.3Zm-19.9 8.7h.1v-.2l-.1.1Zm-19 6.4h.1v-.2l-.1.1Zm-19 5.4h.1v-.1ZM38.2 186Zm96 98.3c5.3 1 10.8-1 16.3-5.8l-.1-.1c-5.5 4.7-11 6.8-16 5.7l-.1.2ZM122 272.8c3 6.3 7.2 10.4 12.3 11.5v-.2c-5-1-9.1-5-12.2-11.4Zm-3.7 0c1.2.2 2.5.2 3.8 0v-.1a12 12 0 0 1-3.8-.1v.1Zm-10.8-11.6c2.5 6.4 6.2 10.6 10.8 11.5v-.1c-4.5-1-8.1-5-10.6-11.5l-.2.1Zm-4.6.2c1.6.4 3.1.3 4.7-.2v-.1c-1.6.4-3.1.5-4.6.2v.1Zm-10.5-12.8c2.2 7.1 5.8 11.8 10.5 12.8v-.1c-4.6-1-8.1-5.6-10.4-12.8h-.1Zm-5.8 1.2a8 8 0 0 0 5.9-1.2v-.1a8 8 0 0 1-5.8 1.2v.1Zm-9-14.8a31 31 0 0 0 3.4 10.2c1.5 2.5 3.4 4.1 5.6 4.6v-.1c-2.1-.5-4-2-5.5-4.6a30 30 0 0 1-3.3-10.1h-.2Zm-7 3.2c2.2.5 4.7-.7 7.2-3.2h-.2c-2.4 2.4-4.8 3.6-7 3.1v.1ZM62.8 219c.2 5.4 1 10 2.2 13.3 1.3 3.3 3 5.5 5.3 6v-.2c-2.1-.5-3.9-2.5-5.2-5.9-1.2-3.3-2-7.8-2.1-13.2h-.2Zm-8.5 7.8c1.3.3 2.7-.3 4.2-1.7 1.5-1.3 3-3.4 4.4-6v-.1c-1.6 2.6-3 4.7-4.5 6-1.5 1.3-2.8 2-4 1.7l-.1.1ZM52 189c-2.1 9.8-2.9 19-2.5 25.8.3 3.4.8 6.3 1.6 8.3.8 2.1 1.9 3.4 3.3 3.7v-.1c-1.3-.3-2.4-1.6-3.2-3.6a28 28 0 0 1-1.5-8.3c-.4-6.8.3-16 2.4-25.8H52Zm17.5-33.6c-1.4-.3-3 .5-4.5 2-1.6 1.6-3.2 4-4.8 7-3.1 6.1-6.1 14.8-8.2 24.6h.1a99.7 99.7 0 0 1 8.3-24.5c1.5-3 3.2-5.4 4.7-7 1.6-1.5 3-2.2 4.4-2Zm4.8 10.6c-.3-3-.8-5.5-1.6-7.3-.8-1.8-1.9-3-3.2-3.3v.2c1.2.2 2.3 1.3 3 3.1a22 22 0 0 1 1.6 7.4h.2Zm14.5-14.5c-2.3-.5-4.8.7-7.3 3.3-2.5 2.5-5 6.4-7.4 11.2h.2c2.3-4.8 4.9-8.6 7.3-11.1 2.5-2.6 5-3.7 7.2-3.3v-.1Zm5.3 5.9c-1.2-3.3-3-5.4-5.3-6v.2c2.2.5 4 2.5 5.2 5.8h.1Zm14.1-10c-2.2-.4-4.6.3-7 2a31 31 0 0 0-7.2 8h.1c2.4-3.5 4.8-6.2 7.2-7.9 2.4-1.7 4.7-2.4 6.9-2Zm4.8 3.5c-1.3-1.9-3-3-4.8-3.5v.2a8 8 0 0 1 4.7 3.4l.1-.1Zm14.9-7.6c-4.8-1-10 1.9-15 7.6h.1c5-5.6 10.2-8.4 14.8-7.4v-.2Zm4.2 2.1a9.8 9.8 0 0 0-4.2-2.1v.2c1.5.3 2.9 1 4.1 2h.1Zm14.3-6c-4.5-1-9.5 1.3-14.4 6l.1.1c4.9-4.7 9.8-7 14.3-6v-.2Zm3.5 1.4a10 10 0 0 0-3.5-1.5v.2c1.2.2 2.3.7 3.4 1.4v-.1Zm15.9-5.7c-5.1-1-10.6 1-16 5.7h.1c5.4-4.5 10.8-6.6 15.9-5.5v-.2Zm12.5 12c-3-6.6-7.3-10.9-12.5-12v.2c5.1 1 9.3 5.3 12.3 11.9h.2Zm4.4 0c-1.5-.4-3-.4-4.5 0v.1c1.5-.3 3-.3 4.5 0v-.2Zm10.7 11.3c-2.5-6.3-6.1-10.4-10.7-11.4v.2c4.5 1 8 5 10.6 11.3h.1Zm4.7-.2a9.8 9.8 0 0 0-4.8.2v.1c1.6-.4 3.2-.5 4.7-.2v-.1Zm10.5 13c-2.2-7.3-5.8-12-10.5-13v.1c4.6 1 8.2 5.7 10.4 13l.1-.1Zm5.8-1.3a8 8 0 0 0-5.9 1.2l.1.2a8 8 0 0 1 5.7-1.2v-.2Zm9 14.9a31 31 0 0 0-3.4-10.2c-1.5-2.6-3.4-4.2-5.7-4.7v.2c2.2.4 4 2 5.5 4.5 1.5 2.6 2.7 6 3.4 10.2h.1Zm7-3.3c-2.2-.5-4.7.7-7.2 3.2l.1.1c2.5-2.5 5-3.6 7.1-3.1v-.2Zm7.6 19.2c-.2-5.4-1-10-2.2-13.3-1.3-3.3-3-5.4-5.4-5.9v.2c2.2.4 4 2.5 5.2 5.8a42 42 0 0 1 2.2 13.2h.2Zm8.5-7.8c-1.3-.2-2.8.4-4.2 1.7-1.5 1.4-3 3.4-4.5 6.1h.2c1.4-2.6 3-4.6 4.4-6 1.4-1.3 2.8-1.9 4-1.6v-.2Zm2.4 37.8c2-9.8 2.9-19 2.4-25.8-.2-3.4-.7-6.2-1.5-8.3-.8-2-2-3.4-3.3-3.7v.2c1.3.3 2.3 1.5 3.1 3.6a27 27 0 0 1 1.6 8.2c.4 6.8-.4 16-2.4 25.8h.1Zm-17.6 33.6c1.5.3 3-.4 4.6-2 1.5-1.6 3.2-4 4.7-7 3.2-6 6.2-14.7 8.3-24.6h-.2c-2 9.8-5 18.5-8.2 24.6-1.6 3-3.2 5.4-4.7 6.9-1.6 1.5-3 2.2-4.4 2v.1Zm-4.7-10.6c.3 3 .8 5.5 1.6 7.4.8 1.8 1.8 3 3.1 3.2v-.1c-1.2-.3-2.2-1.4-3-3.2-.7-1.8-1.3-4.3-1.6-7.3h-.1ZM212 268.3c2.2.4 4.7-.8 7.2-3.3a45 45 0 0 0 7.4-11.3h-.1a43 43 0 0 1-7.4 11.2c-2.5 2.5-5 3.7-7.1 3.2v.2Zm-5.3-6c1.2 3.4 3 5.5 5.3 6v-.2c-2.2-.5-4-2.5-5.2-5.8h-.1Zm-14.1 10c2.2.5 4.6-.2 7-2a31 31 0 0 0 7.2-7.9h-.1a30.8 30.8 0 0 1-7.2 7.8c-2.4 1.7-4.7 2.4-7 2v.1Zm-5-3.5c1.4 1.9 3 3.1 5 3.5v-.1a8 8 0 0 1-4.8-3.5l-.1.1Zm-14.7 7.5c4.8 1 10-1.8 14.9-7.5h-.1c-5 5.6-10.1 8.4-14.7 7.4v.1Zm-4.2-2c1.3 1 2.7 1.7 4.2 2v-.1c-1.4-.3-2.8-1-4-2h-.2Zm-14.4 6.1c4.6 1 9.6-1.3 14.5-6.2-5 4.7-9.9 7-14.4 6v.2Zm-4.1-1.9c1.3 1 2.6 1.6 4.1 2v-.2c-1.4-.3-2.8-1-4-2l-.1.2Zm111.5-45.1c-1.7 7.7-3.8 14.5-5.8 19.3-1 2.4-2.1 4.3-3.1 5.6l-1.4 1.4c-.4.3-.8.4-1.2.3v.1c.4.1.8 0 1.3-.3s1-.8 1.4-1.4c1-1.3 2-3.2 3-5.6 2.2-4.8 4.3-11.7 6-19.4h-.2Zm.3-29c.3.1.7.4 1 .8.2.4.5 1 .7 1.8.3 1.6.5 3.7.5 6.4 0 5.2-.9 12.3-2.5 20h.1a97.6 97.6 0 0 0 2.5-20 28 28 0 0 0-.5-6.4c-.2-.8-.4-1.4-.7-1.9-.3-.4-.7-.7-1-.8l-.1.1ZM250.6 231c1.6-7.7 3.8-14.5 5.8-19.3 1-2.4 2.1-4.3 3.1-5.6l1.4-1.4 1.2-.3v-.1c-.4-.1-.8 0-1.3.3s-1 .8-1.4 1.4c-1 1.3-2 3.2-3.1 5.6-2 4.9-4.2 11.7-5.8 19.4h.1Zm-.3 29c-.4 0-.7-.3-1-.8a6 6 0 0 1-.7-1.8 34 34 0 0 1-.5-6.3c0-5.3.9-12.4 2.5-20l-.1-.1c-1.7 7.7-2.5 14.8-2.6 20 0 2.7.2 4.9.6 6.4.2.8.4 1.5.7 2 .3.4.7.7 1 .8l.1-.2Zm-201-71.6c-1.6 7.7-3.7 14.5-5.8 19.3-1 2.4-2 4.3-3 5.6l-1.4 1.4c-.5.3-.9.4-1.2.3v.1c.4.1.8 0 1.3-.3l1.4-1.4c1-1.3 2-3.2 3-5.6a96 96 0 0 0 5.9-19.4h-.1Zm.4-29c.3.1.6.4 1 .8l.6 1.8c.4 1.6.6 3.7.6 6.4 0 5.2-1 12.3-2.5 20h.1c1.6-7.7 2.5-14.8 2.5-20 0-2.7-.1-4.9-.5-6.4-.2-.8-.4-1.4-.7-1.9-.3-.4-.7-.7-1.1-.8v.1ZM38.2 186c1.6-7.7 3.7-14.5 5.8-19.3 1-2.4 2.1-4.3 3-5.6l1.5-1.4c.4-.3.8-.4 1.2-.3v-.1c-.4-.1-.9 0-1.3.3-.5.3-1 .8-1.4 1.4-1 1.3-2 3.2-3.1 5.6-2.1 4.9-4.2 11.7-5.9 19.4h.2Zm-.3 29c-.4 0-.7-.3-1-.8a6 6 0 0 1-.7-1.8c-.4-1.6-.5-3.7-.5-6.3 0-5.3.9-12.4 2.5-20l-.2-.1a114 114 0 0 0-2.5 20c0 2.7.2 4.9.6 6.4.1.8.4 1.4.7 1.9.3.5.6.8 1 .8v-.1Zm62.8-108.6 31 6.6 2.2-10.2-16.4-3.5 1-4.6 15.4 3.2 1.8-8.3-15.4-3.3.9-4.3 16.4 3.4 2.2-10.1-31.1-6.6-8 37.7Zm34.6 7.3 31 6.6 2.2-10.2-16.4-3.5 1-4.6 15.4 3.3 1.8-8.4-15.4-3.2.9-4.4 16.4 3.5 2.1-10.2-31-6.6-8 37.7ZM279 144.2a116 116 0 0 0-5-20.7c5-.4 8.4-2.8 9.3-7.3 1.5-6.8-4.2-11.4-14.2-13.5l-20.5-4.4-8 37.7 14.7 3.2 3.3-15.7a78.7 78.7 0 0 1 4 17.2l16.5 3.5Zm-19.3-26 1.4-6.6 5.1 1.1c2.2.5 3.1 1.9 2.7 4-.5 2.2-2 3.1-4.1 2.7l-5.1-1.1ZM206 128.7l31 6.6 2.2-10.2-16.4-3.5 1-4.6 15.4 3.2 1.8-8.3-15.5-3.3 1-4.3 16.4 3.5 2.1-10.2-31-6.6-8 37.7Zm-30.3-35.2 15.2 3.2a73.2 73.2 0 0 0-19.2 14.1l-2.1 10.2 33.3 7 2.2-10.1-16.7-3.6a92 92 0 0 1 20.4-13.8l2.1-10.2-33-7-2.2 10.2ZM86.5 64l-19-4-8 37.7 19 4c11.7 2.5 21.6-3.6 24-14.6 2.3-11.1-4.3-20.7-16-23.1Zm-6.7 27.3-3.4-.7 3.7-17.3 3.4.7c3.7.8 5.1 3.6 3.8 9.9-1.3 6.2-3.8 8.2-7.5 7.4Z"></path>
+                                                <path fill="#000" d="m100.7 106.3 31 6.6 2.2-10.2-16.4-3.5 1-4.6 15.4 3.2 1.7-8.3-15.4-3.2 1-4.4 16.3 3.5 2.2-10.2-31-6.6-8 37.7Zm34.5 7.3 31 6.6 2.2-10.2-16.4-3.5 1-4.6 15.4 3.3 1.8-8.4-15.4-3.2.9-4.4 16.4 3.5 2.1-10.2-31-6.6-8 37.7ZM278.9 144c-.9-6.1-2.6-13-5-20.7 4.9-.3 8.3-2.7 9.2-7.2 1.5-6.8-4.2-11.4-14.1-13.5l-20.6-4.4-8 37.7 14.7 3.1 3.3-15.6a78.6 78.6 0 0 1 4 17.2l16.5 3.5Zm-19.4-25.8 1.4-6.7 5.1 1.1c2.2.5 3.1 1.9 2.7 4-.5 2.2-2 3.1-4 2.7l-5.2-1.1Zm-53.6 10.4 31 6.6L239 125l-16.3-3.5 1-4.6L239 120l1.7-8.3-15.4-3.3 1-4.3 16.3 3.5 2.2-10.2-31-6.6-8 37.7Zm-30.3-35.2 15.2 3.2a73.1 73.1 0 0 0-19.2 14.1l-2.1 10.2 33.3 7 2.2-10.1-16.7-3.6a92 92 0 0 1 20.4-13.8l2.1-10.1-33-7-2.2 10.1ZM86.4 63.9l-18.9-4-8 37.7 19 4C90.2 104 100 98 102.5 87c2.3-11-4.4-20.6-16-23.1Zm-6.6 27.3-3.4-.7 3.7-17.3 3.4.7c3.7.8 5.1 3.7 3.8 9.9-1.3 6.2-3.8 8.2-7.5 7.4Z"></path>
+                                                <path fill="#313131" d="m187.3 63.7 21.7 4.6c5.2 1.1 4 6.3 4 6.3l-.4 2.2c-1 5.2-6.3 4.1-6.3 4.1l-56.6-12c-5.2-1-4.1-6.3-4.1-6.3l.5-2.2c1-5.2 6.2-4 6.2-4l22.3 4.6.1-.2a6.4 6.4 0 1 1 12.6 2.7v.2Z" opacity=".4"></path>
+                                                <path fill="#fff" d="M142.6 243.3c-4-.9-7.3-2.7-9.9-5.4a23.2 23.2 0 0 1-5.5-10.7c-1-4.2-1-8.9-.1-14l16 3.5c-1.4 7.6-.6 11.7 2.4 12.3 1.4.3 2.8-.3 4-2a20 20 0 0 0 3-7.7c.7-3.1.7-5.4 0-7-.6-1.4-2-2.4-4.2-2.9l-7.8-1.6 2.6-12.3 7.8 1.7c2 .4 3.6 0 4.8-1 1.2-1.2 2-3.3 2.7-6.4.7-3.1.9-5.5.4-7.2-.3-1.7-1.2-2.8-2.5-3-1.5-.3-2.8.3-4 2a27.5 27.5 0 0 0-3.3 8l-15.9-3.3a32.1 32.1 0 0 1 10.6-17.1c4.9-3.7 10.4-5 16.5-3.6a20 20 0 0 1 15.7 23.8 22 22 0 0 1-5.5 10.6 16.4 16.4 0 0 1-9.5 5 16 16 0 0 1 7.1 8.3c1.5 3.5 1.7 7.5.8 11.8a24 24 0 0 1-5.3 11 21.2 21.2 0 0 1-21 7.2Z"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="a">
+                                                <rect width="254.3" height="311.6" x="64.6" y=".7" fill="#fff" rx="10.1" transform="rotate(12 64.6 .7)"></rect>
+                                                </clipPath>
+                                            </defs>
+                                            </svg>
+                                    </div>
+
+                                    <div class="animated-card">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 266 320">
+                                            <g clip-path="url(#b)">
+                                                <path fill="#1B191F" d="m11.4 0 253.5 8.5L254.4 319 1 310.4z"></path>
+                                                <ellipse cx="132.2" cy="192.3" fill="#A238FF" rx="22.6" ry="96.2" transform="rotate(92 132.2 192.3)"></ellipse>
+                                                <ellipse cx="130.3" cy="248.6" fill="#A238FF" rx="15.3" ry="64.8" transform="rotate(92 130.3 248.6)"></ellipse>
+                                                <ellipse cx="131.6" cy="211.1" fill="#A238FF" rx="20.2" ry="85.8" transform="rotate(92 131.6 211)"></ellipse>
+                                                <ellipse cx="131" cy="229.8" fill="#A238FF" rx="17.7" ry="75.3" transform="rotate(92 131 229.8)"></ellipse>
+                                                <ellipse cx="134.1" cy="136" fill="#A238FF" rx="15.3" ry="64.8" transform="rotate(-88 134.1 136)"></ellipse>
+                                                <ellipse cx="132.9" cy="173.5" fill="#A238FF" rx="20.2" ry="85.8" transform="rotate(-88 132.9 173.5)"></ellipse>
+                                                <ellipse cx="133.5" cy="154.8" fill="#A238FF" rx="17.7" ry="75.3" transform="rotate(-88 133.5 154.8)"></ellipse>
+                                                <path fill="#fff" d="M132 233.1c-4.4-.1-8.3-1.8-11.6-4.9a30.5 30.5 0 0 1-7.4-13.6 68.9 68.9 0 0 1-2.2-20.7c.3-8.3 1.5-15.5 3.6-21.6 2.1-6.1 5-10.8 8.6-14a17.1 17.1 0 0 1 25.6 2.1 30.8 30.8 0 0 1 5.9 17.3l-15.5-.5c-.1-6.7-1.5-10-4-10.2-2 0-3.6 1.7-4.6 5.2a94 94 0 0 0-2 17.2 12 12 0 0 1 4.3-5.5 10 10 0 0 1 6.3-1.8 12 12 0 0 1 8 3.4c2.4 2.2 4.2 5.1 5.5 8.9 1.3 3.7 1.8 7.8 1.7 12.3-.2 5-1.2 9.7-3.2 13.8-2 4-4.6 7.2-8 9.5a18 18 0 0 1-11 3.1Zm-3.8-26.4c-.2 4.3.1 7.5.9 9.6.8 2.1 1.9 3.2 3.4 3.2 3.1.1 4.9-4 5.1-12.5a26 26 0 0 0-1-9.5c-.7-2.1-1.8-3.2-3.3-3.3-3.1 0-4.9 4-5.1 12.5Z"></path>
+                                                <path fill="#000" d="m65.4 97.8 31.7 1 .3-10.3-16.7-.6.1-4.8 15.8.6.3-8.5-15.8-.6.2-4.4 16.7.5.4-10.4-31.8-1-1.2 38.5Zm35.3 1.2 31.7 1 .4-10.4-16.8-.5.2-4.8 15.7.6.3-8.6-15.8-.5.2-4.4 16.8.5.3-10.4-31.7-1-1.3 38.5Zm146.9 5c-2-6-4.8-12.4-8.6-19.6 4.8-1.2 7.7-4.2 7.9-8.8.2-7-6.1-10.5-16.3-10.8l-21-.7-1.4 38.5 15 .5.6-16a78.7 78.7 0 0 1 6.9 16.3l16.9.5ZM224 81.7l.2-6.8 5.2.2c2.2 0 3.4 1.3 3.4 3.5-.1 2.2-1.4 3.3-3.6 3.3l-5.2-.2Zm-51 19.7 31.6 1 .4-10.3-16.8-.6.2-4.7 15.8.5.2-8.5-15.7-.6.1-4.4 16.8.6.3-10.5-31.7-1-1.3 38.5ZM137 72l15.5.6A73.2 73.2 0 0 0 136 89.8l-.4 10.4 34.1 1.1.4-10.4-17-.6c4-5.5 9.7-11 17.6-17.1l.3-10.4-33.8-1.2L137 72ZM44 58.5l-19.4-.7-1.3 38.6 19.3.6c12 .4 20.7-7.2 21.1-18.5.4-11.4-7.8-19.6-19.8-20Zm-1.8 28.1-3.5-.1.6-17.7h3.5c3.7.2 5.6 2.8 5.4 9.1-.2 6.4-2.3 8.8-6 8.7Z"></path>
+                                                <path fill="#A238FF" d="m65.3 97.7 31.7 1 .4-10.3-16.8-.6.2-4.7 15.7.5.3-8.5-15.8-.5.2-4.5 16.8.6.3-10.4-31.7-1-1.3 38.4Zm35.3 1.2 31.7 1 .4-10.3-16.8-.6.2-4.7 15.7.5.3-8.5-15.7-.5.1-4.5 16.8.6.3-10.4-31.7-1.1-1.3 38.5Zm146.8 4.9c-2-6-4.8-12.3-8.6-19.5 4.8-1.2 7.7-4.1 7.9-8.7.2-7-6.1-10.5-16.3-10.9l-21-.7-1.3 38.5 15 .5.5-16a78.6 78.6 0 0 1 6.9 16.3l16.9.5Zm-23.6-22 .2-6.9 5.2.2c2.2 0 3.4 1.3 3.4 3.5-.1 2.2-1.4 3.4-3.6 3.3l-5.2-.2Zm-51 19.5 31.7 1 .3-10.3-16.7-.6.1-4.7 15.8.5.3-8.5-15.8-.5.2-4.5 16.7.6.4-10.4-31.7-1-1.3 38.4ZM136.9 72l15.4.5c-6.6 5-12 10.8-16.3 17.2l-.4 10.4 34 1.1.4-10.4-17-.6c4-5.5 9.7-11 17.6-17l.4-10.5-33.8-1.1L137 72Zm-93-13.6-19.3-.6-1.3 38.5 19.3.6c12 .5 20.7-7.2 21-18.5.4-11.3-7.8-19.6-19.7-20Zm-1.7 28.1-3.5-.1.5-17.7 3.5.1c3.8.1 5.7 2.7 5.5 9-.2 6.4-2.3 8.8-6 8.7Z"></path>
+                                                <path fill="#fff" d="m143.1 40.7 22.3.7c5.2.2 5 5.5 5 5.5v2.3c-.2 5.3-5.5 5.1-5.5 5.1l-57.9-2c-5.3-.1-5-5.4-5-5.4v-2.3c.2-5.3 5.5-5.1 5.5-5.1l22.8.8V40a6.4 6.4 0 1 1 12.8.5v.2Z" opacity=".4"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="b">
+                                                <rect width="254.3" height="311.6" x="11.4" fill="#fff" rx="10.1" transform="rotate(2 11.4 0)"></rect>
+                                                </clipPath>
+                                            </defs>
+                                            </svg>
+                                    </div>
+
+                                    <div class="animated-card">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 282 334">
+                                            <g clip-path="url(#c)">
+                                                <path fill="#A238FF" d="M.1 23.7 252.6.7 281 309.8 28.4 333z"></path>
+                                                <path fill="#000" d="M214.1 273.3c20-1.9 33-39.9 28.8-85-4-45-23.7-80-43.7-78.2-20 1.8-32.9 39.8-28.8 84.9 4.2 45 23.7 80.1 43.7 78.3Z"></path>
+                                                <path fill="#000" d="M169.9 277.3c15-1.4 24-39 19.8-84-4-45.1-19.6-80.6-34.7-79.2-15.1 1.4-24 39-19.9 84.1 4.2 45 19.7 80.5 34.8 79.1Z"></path>
+                                                <path fill="#000" d="M123.4 281.6c20-1.9 33-39.9 28.8-85-4.1-45-23.7-80-43.7-78.2-20 1.8-33 39.8-28.8 84.9 4.1 45 23.7 80.1 43.7 78.3Z"></path>
+                                                <path fill="#000" d="M77 285.8c11.8-1 18.6-31.2 15.3-67.3C89 182.4 76.8 154 65.1 155c-11.7 1.1-18.5 31.2-15.2 67.4 3.3 36 15.4 64.5 27.2 63.4Z"></path>
+                                                <path fill="#fff" d="M107 179c-2 1.2-4.5 2.3-7.7 3.2L98 168c3.6-.8 6.1-1.9 7.6-3.2a8.2 8.2 0 0 0 2.5-5.5l13.8-1.2 7 77.3-16.5 1.5-5.3-58Zm26.5 42c5.9-8.6 10.3-15.3 13.1-20.3 2.9-5 4.7-9.2 5.6-12.4a26 26 0 0 0 1-9.7c-.6-6-2.1-9-4.5-8.7-1.4.1-2.5 1.2-3.2 3.3-.6 2.1-.8 5.5-.5 10.3l-16 1.5a36 36 0 0 1 4.6-21.8 19 19 0 0 1 14.5-8.5 19 19 0 0 1 18 9.2c2 3.1 3.3 7 3.7 11.4a38 38 0 0 1-3.5 18.2 132 132 0 0 1-14.8 24.9l22.7-2.1 1.3 14.9-40.7 3.7-1.3-14Z"></path>
+                                                <path fill="#000" d="m65.8 114 31.7-2.8-1-10.4-16.7 1.5-.4-4.7L95 96l-.8-8.4L78.6 89l-.4-4.4L94.9 83l-1-10.3-31.6 2.8 3.5 38.4Zm35.2-3.2 31.7-2.9-1-10.3L115 99l-.4-4.7 15.7-1.5-.8-8.5-15.7 1.5-.4-4.5 16.7-1.5-1-10.4-31.6 3 3.5 38.3Zm146.4-13.4a132 132 0 0 0-11-18.3c4.7-1.8 7.2-5 6.8-9.6-.6-7-7.4-9.7-17.5-8.8l-21 2 3.5 38.3 15-1.3-1.5-16a78.7 78.7 0 0 1 8.9 15.3l16.8-1.6Zm-26.2-19-.6-6.8 5.2-.4c2.2-.2 3.6.8 3.8 3 .2 2.2-1 3.5-3.2 3.7l-5.2.5ZM173 104.2l31.6-2.8-1-10.4-16.6 1.5-.5-4.7 15.8-1.5-.8-8.4-15.7 1.4-.4-4.4 16.7-1.6-1-10.3-31.6 2.8 3.5 38.4Zm-39.3-24.6 15.4-1.4a73.2 73.2 0 0 0-14 19l.9 10.4 34-3-1-10.4-17 1.5c3.4-6 8.3-12.1 15.4-19.2l-1-10.4-33.7 3.1 1 10.4Zm-94-1.9-19.3 1.8 3.6 38.4 19.2-1.8c12-1 19.6-9.8 18.6-21-1-11.3-10.2-18.5-22.1-17.4Zm1.8 28.1-3.5.3-1.7-17.6 3.5-.3c3.8-.4 6 2 6.6 8.3.6 6.3-1.2 9-5 9.3Z"></path>
+                                                <path fill="#000" d="m65.8 114 31.6-3-1-10.3-16.7 1.5-.4-4.7L95 96.1l-.8-8.5L78.5 89l-.4-4.4 16.7-1.5-1-10.4-31.5 2.9 3.5 38.4Zm35.2-3.3 31.5-2.8-.9-10.4-16.7 1.5-.4-4.7 15.7-1.4-.8-8.5-15.7 1.4-.4-4.4 16.7-1.5-1-10.4-31.5 2.9 3.5 38.3Zm146.2-13.3c-2.7-5.7-6.3-11.7-11-18.3 4.6-1.8 7.2-5 6.8-9.7-.7-7-7.4-9.7-17.5-8.7l-21 1.9L208 101l15-1.4-1.5-15.9a78.6 78.6 0 0 1 8.9 15.2l16.8-1.5Zm-26.2-19-.6-6.8 5.2-.5c2.2-.2 3.6.9 3.8 3 .2 2.3-1 3.6-3.2 3.8l-5.2.5Zm-48.1 25.8 31.5-3-.9-10.3-16.7 1.5-.4-4.7 15.7-1.4-.8-8.5-15.7 1.4-.4-4.4 16.7-1.5-1-10.4-31.6 3 3.6 38.3Zm-39.3-24.7 15.4-1.4a73.1 73.1 0 0 0-14.1 19l1 10.5 33.9-3.1-1-10.4-17 1.5c3.4-6 8.3-12 15.4-19.1l-1-10.4-33.6 3 1 10.4Zm-93.9-1.8-19.3 1.7 3.5 38.4 19.3-1.8c11.9-1 19.6-9.8 18.5-21-1-11.3-10.1-18.4-22-17.3Zm1.7 28-3.5.4-1.6-17.7 3.5-.3c3.7-.3 6 2 6.5 8.3.6 6.3-1.1 9-4.9 9.3Z"></path>
+                                                <path fill="#313131" d="m136 47.7 22-2c5.3-.5 5.8 4.8 5.8 4.8l.2 2.2c.5 5.3-4.8 5.8-4.8 5.8l-57.7 5.3c-5.2.5-5.7-4.8-5.7-4.8l-.2-2.3c-.5-5.3 4.8-5.8 4.8-5.8l22.7-2v-.2a6.4 6.4 0 1 1 12.8-1.2v.2Z" opacity=".4"></path>
+                                                <path fill="#000" d="M46.8 288.6c4-.4 5.7-16.9 3.8-36.8-1.8-20-6.5-36-10.4-35.6-4 .4-5.6 16.9-3.8 36.9 1.8 20 6.5 35.8 10.4 35.5Z"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="c">
+                                                <rect width="254.3" height="311.6" x=".1" y="23.7" fill="#fff" rx="10.1" transform="rotate(-5.2 0 23.7)"></rect>
+                                                </clipPath>
+                                            </defs>
+                                            </svg>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section-gap-xl">
+                    <p class="plans-block">
+                        These offers are non-binding, meaning you can cancel your subscription at any time. These offers are only available to users with no current nor previous subscription to any Deezer subscription tier, with no benefit from any previous Deezer promotion and no previous free trial to any Deezer subscription tier at any time. These offers cannot be combined with any other offer. These are one-time only offers and are valid for one user only.</p>
+                </section>
+
+            </div>
+        </div>
+
+        <div>
+            <footer class="footer">
+                <div class="cell-stores">
+                    <a href="https://apps.apple.com/us/app/deezer-music-podcast-player/id292738169?itsct=apps_box&itscg=30200">
+                        <img src="https://e-cdns-assets.dzcdn.net/common/images/apple-store-badge/en.svg" alt="Download on the App store">
+                    </a>
+
+                    <a href="https://play.google.com/store/apps/details?id=deezer.android.app&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+                        <img src="https://e-cdns-assets.dzcdn.net/common/images/play-store-badge/en.svg" alt="Get it on Google Play">
+                    </a>
+
+                </div>
+
+                <div class="cell-navigation">
+                    <div class="cell-navigation-inner">
+                        <ul class="nav-main">
+                            <li class="nav-main-item-title">
+                                <a class="nav-main-link" href="/en/">Deezer</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/en/offers">Plans</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/explore/reviews">Reviews</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/explore/devices">Devices</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/explore/download">Download the desktop app</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/payment/go.php?id=1&gift=1&origin=footer-gift-card">Gift card</a>
+                            </li>
+                            
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://support.deezer.com/hc/en-gb">Help</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://en.deezercommunity.com/">Community & feedback</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.thebackstage-deezer.com/">The Backstage</a>
+                            </li>
+                        </ul>
+
+                        <ul class="nav-main">
+                            <li class="nav-main-item-title">
+                                <a class="nav-main-link" href="https://www.deezer.com/explore/features/">Features</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/explore/features/flow/">Flow</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/explore/features/songcatcher/">Identify songs</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/explore/features/transfer-playlist/">Transfer your library</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/explore/features/lyrics/">Lyrics</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/explore/features/offline/">Offline listening</a>
+                            </li>
+
+                            <li class="nav-main-item-visble">
+                                <a class="nav-main-link" href="https://www.deezer.com/explore/features/hifi/">High Fidelity (HiFi)</a>
+                            </li>
+                        </ul>
+
+                        <ul class="nav-main">
+                            <li class="nav-main-item-title">
+                                <a class="nav-main-link" href="https://www.deezer.com/en/channels/explore">Explore</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/en/channels/charts">Charts</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/en/channels/popular">Most popular release</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/en/channels/new">New releases</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/en/channels/radios">Radio</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/en/channels/podcasts">Podcasts</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/explore/moments/">Music for all moments</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://zen-deezer.com/">Zen by Deezer</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.newsroom-deezer.com/">Newsroom</a>
+                            </li>
+                        </ul>
+
+                        <ul class="nav-main">
+                            <li class="nav-main-item-title">
+                                <p class="nav-main-link">Who are we?</p>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer-investors.com/">Investors</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer-brandpartnerships.com/">Brand Partnership</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/explore/deezer_for_creators/">Musicians and Podcasters</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://developers.deezer.com/">Developers</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer-blog.com/press/">Press</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezerjobs.com/">Careers</a>
+                            </li>
+                        </ul>
+
+                        <ul class="nav-main">
+                            <li class="nav-main-item-title">
+                                <a class="nav-main-link" href="https://www.deezer.com/legal/legal">Legal</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/legal/cgu">Terms and conditions of use</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/legal/personal-datas">Privacy policy</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link">Cookies</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://www.deezer.com/explore/licenses">Open Source Software Report (EN)</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://vdp.deezer.com/p/Welcome">Vulnerabilities Disclosure Privacy (EN)</a>
+                            </li>
+
+                            <li class="nav-main-item-visible">
+                                <a class="nav-main-link" href="https://e-cdn-files.dzcdn.net/pdfs/legal/digital_services_act.pdf">Digital Services Act</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cell-bottom">
+                    <a href="/en/" class="logo-container">
+                        <div class="logo-deezer">
+                            <img src="Deezer Icon.png" alt="Logo Deezer"/>
+                        </div>
+                    </a>
+
+                    <ul class="social-list">
+                        <li class="social-list-item">
+                            <a class="social-list-link" href="https://www.facebook.com/deezer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
+                                  </svg>
+                            </a>
+
+                            <a class="social-list-link" href="https://www.instagram.com/deezer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+                                  </svg>
+                            </a>
+
+                            <a class="social-list-link" href="https://twitter.com/Deezer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"></path>
+                                  </svg>
+                            </a>
+
+                            <a class="social-list-link" href="https://www.youtube.com/deezer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408z"></path>
+                                  </svg>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="legal">
+                        <div class="legal-list">
+                            <div class="legal-list-copyright">@ 2023 Deezer</div>
+                            <div class="index-navbar">
+                                <span class="icon-chevron-down "></span>
+                                <span class="lang-label">English</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+    <script src="deezer.js"></script>
+
+</body>
+</html>
